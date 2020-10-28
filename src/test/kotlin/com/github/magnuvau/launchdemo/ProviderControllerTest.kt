@@ -1,4 +1,4 @@
-package com.github.magnuvau.launchdemo.providers
+package com.github.magnuvau.launchdemo
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
@@ -22,6 +22,6 @@ class ProviderControllerTest {
         mockMvc.get("/endpoint?delay=${configuredDelay}").andReturn()
         responseDelay = System.currentTimeMillis() - responseDelay
 
-        assertTrue(responseDelay > configuredDelay)
+        assertTrue(responseDelay >  configuredDelay)
     }
 }

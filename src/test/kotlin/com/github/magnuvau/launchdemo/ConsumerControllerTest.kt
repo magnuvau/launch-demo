@@ -1,4 +1,4 @@
-package com.github.magnuvau.launchdemo.consumers
+package com.github.magnuvau.launchdemo
 
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.assertTrue

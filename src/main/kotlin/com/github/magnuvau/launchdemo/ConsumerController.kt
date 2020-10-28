@@ -1,12 +1,10 @@
-package com.github.magnuvau.launchdemo.consumers
+package com.github.magnuvau.launchdemo
 
 import io.ktor.client.*
 import io.ktor.client.engine.apache.*
 import io.ktor.client.request.*
 import kotlinx.coroutines.runBlocking
-import org.apache.http.ssl.SSLContexts
 import org.slf4j.LoggerFactory
-import org.springframework.stereotype.Service
 import java.net.URL
 
 class ConsumerController {

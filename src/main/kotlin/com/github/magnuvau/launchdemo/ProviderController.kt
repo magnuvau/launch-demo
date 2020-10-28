@@ -1,4 +1,4 @@
-package com.github.magnuvau.launchdemo.providers
+package com.github.magnuvau.launchdemo
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
