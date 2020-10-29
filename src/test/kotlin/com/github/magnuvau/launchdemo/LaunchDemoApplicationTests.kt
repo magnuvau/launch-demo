@@ -19,18 +19,17 @@ class LaunchDemoApplicationTests {
 		timer = System.currentTimeMillis() - timer
 
 		assertTrue(timer > 1000 + 2000 + 3000)
-
 	}
 
 	@Test
 	fun `Asynchronous consumers run in parallell`() {
 		var timer = System.currentTimeMillis()
 
-		val job1 = GlobalScope.async { ConsumerController().asynchronous(1000) }
-		val job2 = GlobalScope.async {ConsumerController().asynchronous(2000) }
-		val job3 = GlobalScope.async {ConsumerController().asynchronous(3000) }
-
-		runBlocking { awaitAll(job1, job2, job3) }
+		runBlocking {
+			async { ConsumerController().asynchronous(1000) }
+			async { ConsumerController().asynchronous(2000) }
+			async { ConsumerController().asynchronous(3000) }
+		}
 
 		timer = System.currentTimeMillis() - timer
 
